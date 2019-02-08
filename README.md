@@ -26,8 +26,8 @@ nel.centerBlock(true) // just displays a light blue box  (not very useful)
 ```
 
 ### anyBlock(options)
-- options:{id,className,message,bColor,top,left,height,width,zindex
-- has more options than centerBlock and you can abandon the styling if you want to use your own class
+**options:{id,className,message,bColor,top,left,height,width,zindex**
+> has more options than centerBlock and you can abandon the styling if you want to use your own class
 * id: id of your div
 * className: class you wish to assign
 * message: this can include html
@@ -37,7 +37,7 @@ nel.centerBlock(true) // just displays a light blue box  (not very useful)
 * height: height of div
 * width: width of div
 * zindex: apply a zindex
-- currently anyBlock uses position: absolute if you don't use your own class
+> currently anyBlock uses position: absolute if you don't use your own class
 ```javascript
 // you dont have to use inline options - just make your own css class
 // this avoids having the position: absolute forced upon you
@@ -68,10 +68,9 @@ nel.anyBlock(options)
 ```
 
 ### highlight(options)
-- options: selector,color
-- highlight any div (or technically element) via id or class. If you use class, nel will highlight every element with a default border color of yellow.
-- you can change the color. 
-```
+**options: selector,color**
+> highlight any div (or technically element) via id or class. If you use class, nel will highlight every element with a default border color of yellow (you can change the color). 
+```javascript
 // highlights every elem contains classname parrot (preset color - yellow border)
 nel.highlight(".parrot")
 
@@ -82,26 +81,26 @@ nel.highlight(".parrot", "red")
 ## UI TOOLS
 
 ### **listenWidth()**
-- via the console, display every width size upon resize of your viewpanel
+> via the console, display every width size upon resize of your viewpanel
 ```
 nel.listenWidth() 
 ```
 
 ### **listenHeight()**
-- via the console, display every height size upon resize of your viewpanel
+> via the console, display every height size upon resize of your viewpanel
 ```
 nel.listenHeight() 
 ```
 
 ### **size(value)**
-- this will console.log the width or height of the viewpanel
+> this will console.log the width or height of the viewpanel
 ```
 nel.size("width"); 
 nel.size("height"); 
 ```
 
 ### **read(selector)**
-- this is simply document.querySelector() - only tested with the following
+> this is simply document.querySelector() - only tested with the following
 ```
 nel.read("#id") // returns the html contents of any element id
 nel.read(".class") // returns the html contents of the FIRST class found
@@ -111,14 +110,14 @@ nel.read(".class") // returns the html contents of the FIRST class found
 ## GENERAL TOOLS 
 
 ### **displayCookies()**
-- this will console.log all cookies located on the page you are viewing in a fairly pretty format
+> this will console.log all cookies located on the page you are viewing in a fairly pretty format
 ```
 nel.displayCookies()
 ```
 
 ### **setCookie(options)**
-- options = {name:"value",value:"value"},days,SECURE
-- sets a cookie by passing the appropriate paramaters like so:
+**options = {name:"value",value:"value"},days,SECURE**
+> sets a cookie by passing the appropriate paramaters like so:
 ```
 // cookie name of fruit, a val of pear, six days expiration, no secure flag
 nel.setCookie({name:'fruit',value:'pear'},days:6,false) 
@@ -127,17 +126,17 @@ nel.setCookie({name:'fruit',value:'pear'},days:30,true)
 ```
 
 ### **delCookie(name)**
-- removes a cookie by name
+> removes a cookie by name
 ```
 nel.delCookie("fruit") /* removes the fruit cookie */
 ```
 
 ### **r(options)**
 #### randomized alpha/numeric string
-- option : [1-10], true|false
-- returns a random 6 alpha numeric string by default
-- change length of string between 1 and 10
-- Uppercase: default false but if you set to true will return the string in uppercase
+**option : [1-10], true|false**
+> returns a random 6 alpha numeric string by default
+> change length of string between 1 and 10
+> Uppercase: default false but if you set to true will return the string in uppercase
 ```
 nel.r() // this gives you a six character random alpha/numberic string
 net.r(4,true) // this gives you a four character random alpha/numeric string in uppercase
@@ -146,15 +145,15 @@ x = nel.r() // assigns the variable x a six character random alpha/numeric strin
 
 ### **backit(options)**
 #### *Experimental* Backup via sessionStorage
-- Can backup the entire webpage to sessionStorage. Could be a security issue or performance problem.
-- You can back up by ID (like a div) and change the value of the sessionStorage variable
-- the intent here is to store say the contents of a rich text editor and you could set it as an interval 
-- a local backup. I believe sessionStorage has a max of 10MB. 
-- option : id, var, type
-- target a specific id or leave blank for the entire page
-- name of variable of sessionStorage variable you want to use (default = backupviasessionstorage)
-- Grab HTML or TEXT (only applies to an ID that you are targeting) may need to add val() also
-- could also be used for performance boosting a webpage?
+> Can backup the entire webpage to sessionStorage. Could be a security issue or performance problem.
+> You can back up by ID (like a div) and change the value of the sessionStorage variable
+> the intent here is to store say the contents of a rich text editor and you could set it as an interval 
+> a local backup. I believe sessionStorage has a max of 10MB. 
+**option : id, var, type**
+> target a specific id or leave blank for the entire page
+> name of variable of sessionStorage variable you want to use (default = backupviasessionstorage)
+> Grab HTML or TEXT (only applies to an ID that you are targeting) may need to add val() also
+> could also be used for performance boosting a webpage?
 ```
 nel.backit() // store the entire webpage in sessionStorage:backupviasessionstorage
 nel.backit("apple","backup") // store the innerHTML contents of element apple to sessionStorage:backup
