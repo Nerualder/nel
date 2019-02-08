@@ -152,11 +152,11 @@ x = nel.r() // assigns the variable x a six character random alpha/numeric strin
 - a local backup. I believe sessionStorage has a max of 10MB. 
 - option : id, var, type
 - target a specific id or leave blank for the entire page
-- name of variable of localStorage variable you want to use (default = backupvialocalstorage)
+- name of variable of sessionStorage variable you want to use (default = backupviasessionstorage)
 - Grab HTML or TEXT (only applies to an ID that you are targeting) may need to add val() also
 - could also be used for performance boosting a webpage?
 ```
-nel.backit() // store the entire webpage in localStorage:backupvialocalstorage
+nel.backit() // store the entire webpage in sessionStorage:backupviasessionstorage
 nel.backit("apple","backup") // store the innerHTML contents of element apple to sessionStorage:backup
 nel.backit("apple","backup",false) // store the innerText contents of element apple to sessionStorage:backup
 ```
@@ -179,7 +179,7 @@ nel.backit("apple","backup",false) // store the innerText contents of element ap
 | --------|----------------------|----------------------------|--------------------|
 | 0.0.4   | GENERAL TOOLS        | Replaced if with ternary   | r()                |
 | -       | -                    | New                        | backit()           |
-| 		  | ALL 				 | Some consolidation of code |                    |
+| 	  | ALL 		 | Some consolidation of code |                    |
 
 #### 2019/02/03 0.0.3
 | Version | Type                 | Change             | Method
