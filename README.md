@@ -3,10 +3,11 @@
 ---
 Tools for Web Developers
 
-Version 0.0.6 - 02/07/2019
+Version 0.0.7 - Dev
 
-> javascript library for implementing ES6 and testing techniques with Chrome
-> various tools to build upon and grow a homebrew kit
+> A javascript library to test my work in ES6 and for use in Chrome only
+> These are various tools to build upon and grow a homebrew kit
+> nel() has UI, UI TOOLS and GENERAL TOOLS
 
 ## UI
 
@@ -16,8 +17,9 @@ Version 0.0.6 - 02/07/2019
 * "message"  : *Message to be displayed* - default = ""
 * "red"      : *Background color* - default = "#ADD8E6"
 
-> centerBlock creates a modal like window with a custom message and color (hex is fine)
-> the classname for the div is nel_centerBlock if you want to customize the default appearance
+> centerBlock creates a modal like window with a custom message and color (hex is fine).
+> To close it, you have to call nel.centerBlock(false), so I would like to generate a close
+> button as a future enhancement.
 ```javascript
 nel.centerBlock(true,"Hello World", "red") // displays a message with text 'Hello World' and a bgcolor of red 
 nel.centerBlock(false) // remove any previously declared block
@@ -27,7 +29,10 @@ nel.centerBlock(true) // just displays a light blue box  (not very useful)
 
 ### anyBlock(options)
 **options:{id,className,message,bColor,top,left,height,width,zindex**
-> has more options than centerBlock and you can abandon the styling if you want to use your own class
+> Has more options than centerBlock and you can abandon the styling if you want to use your own class.
+> I know inline styling is frowned upon. This is a concept code to look at passing mutiple variables
+> to the modal div as an object. You can assign a default class, so you don't have to use any
+> inline styles :)
 * id: id of your div
 * className: class you wish to assign
 * message: this can include html
