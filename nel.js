@@ -1,5 +1,5 @@
 // nel.js
-// 0.0.5 02/05/2019
+// 0.0.6 02/07/2019
 // nel is a set of tools that hopefully aid web developers with a variety of time saving features
 // INTENTIONALLY LEFT COMMENTING OUT
 
