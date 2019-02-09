@@ -25,12 +25,13 @@ function nel_RemoveClass_JDWSA(className) {
 // cycle through DOM CLASS ELEMENTS
 // https://stackoverflow.com/questions/18927025/getelementsbyclassname-to-change-the-style-of-elements-when-event-occurs and adapted
 function nel_loopelements_JWDSA(coll, color, aname){
-let x = document.createElement("span");                     
-let t = document.createTextNode(aname);    // Create a text node
     for(var i=0, len=coll.length; i<len; i++)
     {
         coll[i].style["border"] = "thick solid " + color;
-		coll[i].appendChild(x)
+		let x = document.createElement("span"); 
+		x.innerText = ">" + aname + "<";
+		x.style.color = "blue";
+		coll[i].appendChild(x)	
     }
 }
 
@@ -67,7 +68,15 @@ var nel = {
 	highlight: function(selector,color='yellow'){
 		let tmp = ''
 		let aname = selector.substring(1);
-		if(selector.charAt(0)=="#"){tmp = document.getElementById(aname);tmp.style.border = "thick solid " + color}
+		if(selector.charAt(0)=="#")
+		{
+			tmp = document.getElementById(aname);
+			tmp.style.border = "thick solid " + color;
+			let x = document.createElement("span"); 
+			x.innerText = ">" + aname + "<";
+			x.style.color = "blue";
+			tmp.appendChild(x)	
+		}
 		if(selector.charAt(0)=="."){tmp = document.getElementsByClassName(aname);nel_loopelements_JWDSA(tmp, color,aname)}	
 	},
 	// UI TOOLS ------------------------------------------------------------------------------------------------------------
