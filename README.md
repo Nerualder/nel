@@ -140,7 +140,7 @@ nel.delCookie("fruit") /* removes the fruit cookie */
 #### randomized alpha/numeric string
 **option : [1-10], true|false**
 > returns a random 6 alpha numeric string by default
-> change length of string between 1 and 10
+> change length of string between 1 and 20
 > Uppercase: default false but if you set to true will return the string in uppercase
 ```
 nel.r() // this gives you a six character random alpha/numberic string
@@ -172,6 +172,7 @@ nel.backit("apple","backup",false) // store the innerText contents of element ap
 | --------|----------------------|--------------------------------|---------------------------------|
 | 0.0.7   | UI 		         | highlight adds selector name   | highlight()                     |
 |         | OTHER                | continued work on readme.md    | stablize table widths           |
+|         | GENERAL TOOLS        | returns up to 20 chars now     | r()                             |
 
 #### 2019/02/07 0.0.6
 | Version | Type                 | Change                         | Method
