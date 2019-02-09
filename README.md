@@ -138,13 +138,14 @@ nel.delCookie("fruit") /* removes the fruit cookie */
 
 ### **r(options)**
 #### randomized alpha/numeric string
-**option : [1-10], true|false**
+**option : [1-20], true|false**
 > returns a random 6 alpha numeric string by default
 > change length of string between 1 and 20
 > Uppercase: default false but if you set to true will return the string in uppercase
 ```
 nel.r() // this gives you a six character random alpha/numberic string
-net.r(4,true) // this gives you a four character random alpha/numeric string in uppercase
+nel.r(4,true) // this gives you a 4 character random alpha/numeric string in uppercase
+nel.r(25,true) // this gives you a 20 character random alpha/numeric string in uppercase (max 20)
 x = nel.r() // assigns the variable x a six character random alpha/numeric string
 ```
 
