@@ -115,8 +115,9 @@ var nel = {
 		document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';			
 	},
 	r: function(leng=6,UPPER=false) {
-		leng = 	(leng > 10) ? 10 : (leng < 1) ? 1 : leng;
-		let tmath = Math.random().toString(36).slice(3,leng+3)
+		leng = 	(leng >= 20) ? 20 : (leng < 1) ? 1 : leng;
+		equa = Math.random().toString(36).slice(2,12) + Math.random().toString(36).slice(2,12);
+		let tmath = equa.slice(0,leng)
 		return x = (UPPER) ? tmath.toUpperCase() : tmath
 	},
 	backit: function(id="",variable = "backupviasessionStorage",HTML = true) { // EXPERIMENTAL
