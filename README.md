@@ -74,7 +74,7 @@ nel.anyBlock(options)
 
 ### highlight(options)
 **options: selector,color**
-> highlight any div (or technically element) via id or class. If you use class, nel will highlight every element with a default border color of yellow (you can change the color). 
+> highlight any div (or technically element) via id or class. If you use class, nel will highlight every element with a default border color of yellow (you can change the color). Highlight attempts to display the selectors name within the targeted element.
 ```javascript
 // highlights every elem contains classname parrot (preset color - yellow border)
 nel.highlight(".parrot")
@@ -167,49 +167,55 @@ nel.backit("apple","backup",false) // store the innerText contents of element ap
 
 ## Change Log
 
+#### 2019/XX/XX 0.0.7 Pending
+| Version | Type                 | Change                         | Method
+| --------|----------------------|--------------------------------|---------------------------------|
+| 0.0.7   | UI 		         | highlight adds selector name   | highlight()                     |
+|         | OTHER                | continued work on readme.md    | stablize table widths           |
+
 #### 2019/02/07 0.0.6
 | Version | Type                 | Change                         | Method
-| --------|----------------------|--------------------------------|------------------------------|
-| 0.0.6   | GENERAL TOOLS        | backit now uses sessionStorage | backit()                     |
+| --------|----------------------|--------------------------------|---------------------------------|
+| 0.0.6   | GENERAL TOOLS        | backit now uses sessionStorage | backit()                        |
 
 #### 2019/02/05 0.0.5
-| Version | Type                 | Change                     | Method
-| --------|----------------------|----------------------------|------------------------------|
-| 0.0.5   | UI                   | Bug fixes - used margins   | centerBlock()                |
-| -       |                      | can't get flex to work :(  |                              |
+| Version | Type                 | Change                         | Method
+| --------|----------------------|--------------------------------|---------------------------------|
+| 0.0.5   | UI                   | Bug fixes - used margins       | centerBlock()                   |
+| -       | -                    | can't get flex to work :(      |                                 |
 
 #### 2019/02/04 0.0.4
-| Version | Type                 | Change                     | Method
-| --------|----------------------|----------------------------|--------------------|
-| 0.0.4   | GENERAL TOOLS        | Replaced if with ternary   | r()                |
-| -       | -                    | New                        | backit()           |
-| 	  | ALL 		 | Some consolidation of code |                    |
+| Version | Type                 | Change                         | Method
+| --------|----------------------|--------------------------------|---------------------------------|
+| 0.0.4   | GENERAL TOOLS        | Replaced if with ternary       | r()                             |
+| -       | -                    | New                            | backit()                        |
+| 	  | ALL 		 | Some consolidation of code     |                                 |
 
 #### 2019/02/03 0.0.3
-| Version | Type                 | Change             | Method
-| --------|----------------------|--------------------|--------------------|
-| 0.0.3   | UI TOOLS             | New                | read()             |
-| -       | -                    | -                  | -                  |
-| -       | UI                   | New                | highlight()        |
-| -       | -                    | -                  | -                  |
-| -       | GENERAL TOOLS        | -                  | r()                |
+| Version | Type                 | Change                         | Method
+| --------|----------------------|--------------------------------|---------------------------------|
+| 0.0.3   | UI TOOLS             | New                            | read()                          |
+| -       | -                    | -                              | -                               |
+| -       | UI                   | New                            | highlight()                     |
+| -       | -                    | -                              | -                               |
+| -       | GENERAL TOOLS        | -                              | r()                             |
 
 #### 2019/02/02 0.0.2
-| Version | Type                 | Change             | Method
-| --------|----------------------|--------------------|--------------------|
-| 0.0.2   | UI                   | New                | centerBlock()      |
-|         |                      |                    | anyBlock()         |
+| Version | Type                 | Change                         | Method
+| --------|----------------------|--------------------------------|---------------------------------|
+| 0.0.2   | UI                   | New                            | centerBlock()                   |
+| -       |                      |                                | anyBlock()                      |
 
 #### 2019/02/01 0.0.1
 
-| Version | Type                 | Change             | Method
-| --------|----------------------|--------------------|--------------------|
-| 0.0.1   | UI TOOLS             | New                | listenWidth()      |
-| -       | -                    | New                | listenHeight()     |
-| -       | -                    | New                | size()             |
-| -       | GENERAL TOOLS        | New                | displayCookies()   |
-| -       | -                    | New                | setCookie()        |
-| -       | -                    | New                | delCookie()        |
+| Version | Type                 | Change                         | Method
+| --------|----------------------|--------------------------------|---------------------------------|
+| 0.0.1   | UI TOOLS             | New                            | listenWidth()                   |
+| -       | -                    | New                            | listenHeight()                  |
+| -       | -                    | New                            | size()                          |
+| -       | GENERAL TOOLS        | New                            | displayCookies()                |
+| -       | -                    | New                            | setCookie()                     |
+| -       | -                    | New                            | delCookie()                     |
 
 
 
