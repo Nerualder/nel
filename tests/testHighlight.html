@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../nel.js"></script>
+<style> 
+[class$="test"] {
+  background: #D0C9EA;
+}
+</style>
+</head>
+<body>
+<h2>TEST - nel.highlight() </h2>
+
+<div class="first_test grp">The first div element.</div>
+<div class="second">The second div element.</div>
+<div class="my-test">The third div element.</div>
+<p class="mytest grp">p tag This is some text in a paragraph.</p>
+
+<div>
+ <h4>Image with ID of imgone</h4>
+<img src="cat.png" id="imgone" alt="image">
+</div>
+<ul>Main
+<li id="one">One (id=one)</li>
+<li>Two</li>
+<li>Three</li>
+</ul>
+
+<code>
+<strong>Test Results</strong><br>
+highlight: function(selector,color='yellow')<br>
+// highlights third div (yellow border) and shows class name <br>
+nel.highlight(".my-test") <br>
+// highlights image (yellow border) but <strong>fails</strong> to show id name (due to adding child to image tag)<br>
+nel.highlight("#imgone") <br>
+// highlights li (purple) with id od one and shows id name<br>
+nel.highlight("#one","purple")<br>
+// highlights all classes with grp and shows class name - mix of div and p tag<br>
+nel.highlight('.grp');
+</code>
+
+<script>
+nel.highlight(".my-test");
+nel.highlight("#imgone","purple")
+nel.highlight("#one")
+nel.highlight('.grp')
+</script>
+
+
+</body>
+</html>
