@@ -151,15 +151,15 @@ x = nel.r() // assigns the variable x a six character random alpha/numeric strin
 
 ### **backit(options)**
 #### *Experimental* Backup via sessionStorage
-> Can backup the entire webpage to sessionStorage. Could be a security issue or performance problem.
-> You can back up by ID (like a div) and change the value of the sessionStorage variable
-> the intent here is to store say the contents of a rich text editor and you could set it as an interval 
-> a local backup. I believe sessionStorage has a max of 10MB. 
+> Can backup the entire webpage via sessionStorage! This could be a security issue or performance problem.
+> You can back up by ID (such as a div) and change the value of the sessionStorage variable.
+> The intent here is to store say the contents of a rich text editor and you could set it as an interval 
+> for a local backup. I believe sessionStorage has a max of 10MB. 
 **option : id, var, type**
-> target a specific id or leave blank for the entire page
-> name of variable of sessionStorage variable you want to use (default = backupviasessionstorage)
-> Grab HTML or TEXT (only applies to an ID that you are targeting) may need to add val() also
-> could also be used for performance boosting a webpage?
+* Target a specific id or leave blank for the entire page.
+* Name of variable sessionStorage you want to use (default = backupviasessionstorage)
+* Grab HTML or TEXT (only applies to an ID that you are targeting)
+* Could also be used for performance boosting a webpage?
 ```
 nel.backit() // store the entire webpage in sessionStorage:backupviasessionstorage
 nel.backit("apple","backup") // store the innerHTML contents of element apple to sessionStorage:backup
