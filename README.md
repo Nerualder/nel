@@ -168,7 +168,7 @@ nel.backit("apple","backup",false) // store the innerText contents of element ap
 
 ## Change Log
 
-#### 2019/XX/XX 0.0.7 Pending
+#### 2019/02/17 0.0.7 
 | Version | Type                 | Change                         | Method
 | --------|----------------------|--------------------------------|---------------------------------|
 | 0.0.7   | UI 		         | highlight adds selector name   | highlight()                     |
