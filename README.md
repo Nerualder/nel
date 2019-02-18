@@ -3,7 +3,7 @@
 ---
 Tools for Web Developers
 
-Version 0.0.7 - Dev
+Version 0.0.8 - Dev
 
 > A javascript library to test my work in ES6 and for use in Chrome only
 > These are various tools to build upon and grow a homebrew kit
@@ -167,6 +167,8 @@ nel.backit("apple","backup",false) // store the innerText contents of element ap
 ```
 
 ## Change Log
+
+#### 2019/XX/XX 0.0.8 Pending
 
 #### 2019/02/17 0.0.7 
 | Version | Type                 | Change                         | Method
