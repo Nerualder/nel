@@ -1,5 +1,5 @@
 // nel.js
-// 0.0.6 02/07/2019
+// 0.0.7 in Development
 // nel is a set of tools that hopefully aid web developers with a variety of time saving features
 // INTENTIONALLY LEFT COMMENTING OUT
 
@@ -25,12 +25,13 @@ function nel_RemoveClass_JDWSA(className) {
 // cycle through DOM CLASS ELEMENTS
 // https://stackoverflow.com/questions/18927025/getelementsbyclassname-to-change-the-style-of-elements-when-event-occurs and adapted
 function nel_loopelements_JWDSA(coll, color, aname){
-let x = document.createElement("span");                     
-let t = document.createTextNode(aname);    // Create a text node
     for(var i=0, len=coll.length; i<len; i++)
     {
         coll[i].style["border"] = "thick solid " + color;
-		coll[i].appendChild(x)
+		let x = document.createElement("span"); 
+		x.innerText = ">" + aname + "<";
+		x.style.color = "blue";
+		coll[i].appendChild(x)	
     }
 }
 
@@ -67,7 +68,15 @@ var nel = {
 	highlight: function(selector,color='yellow'){
 		let tmp = ''
 		let aname = selector.substring(1);
-		if(selector.charAt(0)=="#"){tmp = document.getElementById(aname);tmp.style.border = "thick solid " + color}
+		if(selector.charAt(0)=="#")
+		{
+			tmp = document.getElementById(aname);
+			tmp.style.border = "thick solid " + color;
+			let x = document.createElement("span"); 
+			x.innerText = ">" + aname + "<";
+			x.style.color = "blue";
+			tmp.appendChild(x)	
+		}
 		if(selector.charAt(0)=="."){tmp = document.getElementsByClassName(aname);nel_loopelements_JWDSA(tmp, color,aname)}	
 	},
 	// UI TOOLS ------------------------------------------------------------------------------------------------------------
@@ -106,8 +115,9 @@ var nel = {
 		document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';			
 	},
 	r: function(leng=6,UPPER=false) {
-		leng = 	(leng > 10) ? 10 : (leng < 1) ? 1 : leng;
-		let tmath = Math.random().toString(36).slice(3,leng+3)
+		leng = 	(leng >= 20) ? 20 : (leng < 1) ? 1 : leng;
+		equa = Math.random().toString(36).slice(2,12) + Math.random().toString(36).slice(2,12);
+		let tmath = equa.slice(0,leng)
 		return x = (UPPER) ? tmath.toUpperCase() : tmath
 	},
 	backit: function(id="",variable = "backupviasessionStorage",HTML = true) { // EXPERIMENTAL

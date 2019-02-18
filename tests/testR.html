@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../nel.js"></script>
+<style> 
+ div {margin-top:20px}
+ #results {font-family:Lucida Console;font-size:14px}
+</style>
+</head>
+<body>
+<h2>TEST - nel.r() </h2>
+<h3>Randomizer</h3>
+<div id="results">
+<h4>Results of Randomizer Tests</h4>
+
+
+</div>
+
+<div>
+<strong>
+	r() returns 0-20 characters and adjusts 0 or negeative numbers to 1. Anything above 20 adjusts to 20. Calling r() with no integer defaults to the 
+	random 6 length.
+</strong>
+</div>
+
+<script>
+function callrand(input)
+{
+	
+	var x = nel.r(input,true)
+	var res = document.getElementById("results")
+	res.innerHTML += "<br>--input = " + input + "<br>"
+	res.innerHTML += x + "<br>"
+	res.innerHTML += "--length of random string = " + x.length + "<br>"
+	
+}
+callrand(7)
+callrand(21)
+callrand(-3)
+callrand(12)
+callrand()
+</script>
+
+
+</body>
+</html>
